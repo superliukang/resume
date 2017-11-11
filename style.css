@@ -82,6 +82,7 @@ a {
 }
 
 .banner {
+    background-image: url('http://rscardwp.px-lab.com/wp-content/uploads/2016/02/rs-cover.jpg');
     background-size: cover;
     height: 515px;
 }
@@ -92,14 +93,14 @@ a {
 }
 
 .profile {
-    max-width: 840px;
+    max-width: 940px;
     margin: 0 auto;
-    padding: 50px 50px 0;
+    
     background: #fff;
 }
 
 .profile>.baseInformation {
-    padding-bottom: 50px;
+    padding: 50px;
 }
 
 .profile .picture{
