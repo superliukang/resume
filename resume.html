@@ -8,7 +8,7 @@
     </head>
     <body>
         <header class="topNavBar clearfix">
-            <a class="logo" src="#" alt="logo">
+            <a class="logo" href="#" name="logo">
                 <span class="rs">RS</span><span class="card">card</span>
             </a>
             <nav class="headGuide clearfix">
@@ -71,36 +71,98 @@
                     </a>
                 </footer>  
             </div>
-            <a href="#"></a>
-            <p>我是占孜伟，是一个前端工程师，目前还在读书</p>
+            <p class="download"><a target="_blank" href="./resume.pdf" download>下载简历</a></p>
+
+            <p class="introduction">我是占孜伟，是一个前端工程师，目前还在读书</p>
         </main>
         <section class="skills">
-            <h2>专业技能</h2>
-            <ol>
-                <li>HTML 5 &amp; CSS 3</li>
-                <li>JavaScript</li>
-                <li>JQuery</li>
-                <li>Vue</li>
-                <li>React</li>
-                <li>HTTP</li>
+            <h2>技能</h2>
+            <ol class="clearfix">
+                <li>
+                    <h3>
+                        HTML 5 &amp; CSS 3
+                    </h3>
+                    <div class="progressBar">
+                        <div class="progress" style="width: 10%;"></div>
+                    </div>
+                </li>
+                <li>
+                    <h3>
+                        JavaScript
+                    </h3>
+                    <div class="progressBar">
+                        <div class="progress" style="width: 20%"></div>
+                    </div>
+                </li>
+                <li>
+                    <h3>
+                        jQuery
+                    </h3>
+                    <div class="progressBar">
+                        <div class="progress" style="width: 30%"></div>
+                    </div>
+                </li>
+                <li>
+                    <h3>
+                        Vue.js
+                    </h3>
+                    <div class="progressBar">
+                        <div class="progress" style="width: 40%"></div>
+                    </div>
+                </li>
+                <li>
+                    <h3>
+                        React.js
+                    </h3>
+                    <div class="progressBar">
+                        <div class="progress" style="width: 50%"></div>
+                    </div>
+                </li>
+                <li>
+                    <h3>
+                        Node.js
+                    </h3>
+                    <div class="progressBar">
+                        <div class="progress" style="width: 60%"></div>
+                    </div>
+                </li>
             </ol>
         </section>
-        <section>
-            <h2>
-                技能
-            </h2>
+        <section class="portfolio">
+            <h2>作品集</h2>
             <nav>
-                <ol>
-                    <li>所有</li>
-                    <li>框架</li>
-                    <li>原生JS&amp;CSS</li>
+                <ol class="clearfix">
+                    <li id="portfolio1">所有</li>
+                    <li id="portfolio2">框架</li>
+                    <li id="portfolio3">原生JS&amp;CSS</li>
                 </ol>
+                <div id="portfolioBar" class="bar state-1">
+                    <div class="bar-inner"></div>
+                </div>
             </nav>
-            <div class="works">
-                <div class="big"></div>
-                <div class="small"></div>
-                <div class="small"></div>
+            <script>
+                portfolio1.onclick= function(){
+                    portfolioBar.className = 'bar state-1'
+                }
+                portfolio2.onclick= function(){
+                    portfolioBar.className = 'bar state-2'
+                }
+                portfolio3.onclick= function(){
+                    portfolioBar.className = 'bar state-3'
+                }
+            </script>
+            <div class="works" style="height: 597px;">
+                <div class="big" style="top: 0; left: 0;">
+                    <img src="./img/1.jpg" alt="作品1">
+                </div>
+                <div class="small" style="top: 0; left: 645px;">
+                    <img src="./img/2.jpg" alt="作品2">
+                </div>
+                <div class="small" style="top: 312px; left: 645px;">
+                    <img src="./img/3.jpg" alt="作品3">
+                </div>
             </div>
+
         </section>
     </body>    
 </html>
