@@ -36,7 +36,7 @@ a {
     text-decoration: none;
 }
 
-.topNavBar {
+header.topNavBar {
     position: fixed;
     top: 0;
     left: 0;
@@ -44,7 +44,7 @@ a {
     padding: 20px 16px;
 }
 
-.logo {
+header.logo {
     float: left;
     font-size: 24px;
     font-family: "Arial Black";
@@ -52,12 +52,12 @@ a {
     padding-bottom: 4px;
 }
 
-.rs {
+header.rs {
     margin-right: 4px;
     color: #e6686a;
 }
 
-.card {
+header.card {
     color: #9a9da2;
 }
 
@@ -89,7 +89,7 @@ a {
     height: 515px;
 }
 
-.banner .mask {
+.banner > .mask {
     height: 515px;
     background: rgba(0,0,0,.7);
 }
@@ -115,7 +115,7 @@ a {
     width: 470px;
 }
 
-.profile .text>.welcome {
+.profile>.baseInformation>.text>.welcome {
     position: relative;
     display: inline-block;
     background: #e6686a;
@@ -125,7 +125,7 @@ a {
     margin-bottom: 10px;
 }
 
-.text>.welcome>.triangle {
+.profile>.baseInformation>.text>.welcome>.triangle {
     position: absolute;
     left: 4px;
     top: 100%;
@@ -134,22 +134,22 @@ a {
     border-top-width: 0;
 }
 
-.text>hr {
+.profile>.baseInformation>.text>hr {
     margin: 20px 0;
 }
 
-.text>dl>dt,.text>dl>dd {
+.profile>.baseInformation>.text>dl>dt,.text>dl>dd {
     float: left;
     padding: 5px 0;
 }
 
 
-.text>dl>dt {
+.profile>.baseInformation>.text>dl>dt {
     width: 30%;
     font-weight: bold;
 }
 
-.text>dl>dd {
+.profile>.baseInformation>.text>dl>dd {
     width: 70%;
     color: #9da0a7;
 }
