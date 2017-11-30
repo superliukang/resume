@@ -53,14 +53,13 @@ header.topNavBar {
 
 header.topNavBar.sticky {
     background: white;
-    
     box-shadow: 0 1px 10px rgba(0,0,0, .5);
     color: #3d4451;
     padding: 12px 16px;
     
 }
 
-header .logo {
+.topNavBar > .logo {
     float: left;
     font-size: 24px;
     font-family: "Arial Black";
@@ -68,12 +67,12 @@ header .logo {
     padding-bottom: 4px;
 }
 
-header .rs {
+.topNavBar > .logo > .rs {
     margin-right: 4px;
     color: #e6686a;
 }
 
-header .card {
+.topNavBar > .logo > .card {
     color: #9a9da2;
 }
 
@@ -172,7 +171,7 @@ header .card {
     background: #fff;
 }
 
-.profile>.baseInformation {
+.profile > .baseInformation {
     padding: 50px;
 }
 
@@ -186,7 +185,7 @@ header .card {
     width: 470px;
 }
 
-.profile>.baseInformation>.text>.welcome {
+.profile > .baseInformation>.text>.welcome {
     position: relative;
     display: inline-block;
     background: #e6686a;
@@ -196,7 +195,7 @@ header .card {
     margin-bottom: 10px;
 }
 
-.profile>.baseInformation>.text>.welcome>.triangle {
+.profile > .baseInformation>.text>.welcome>.triangle {
     position: absolute;
     left: 4px;
     top: 100%;
@@ -205,22 +204,22 @@ header .card {
     border-top-width: 0;
 }
 
-.profile>.baseInformation>.text>hr {
+.profile > .baseInformation > .text > hr {
     margin: 20px 0;
 }
 
-.profile>.baseInformation>.text>dl>dt,.text>dl>dd {
+.profile > .baseInformation > .text > dl > dt,.text>dl>dd {
     float: left;
     padding: 5px 0;
 }
 
 
-.profile>.baseInformation>.text>dl>dt {
+.profile > .baseInformation > .text > dl>dt {
     width: 30%;
     font-weight: bold;
 }
 
-.profile>.baseInformation>.text>dl>dd {
+.profile > .baseInformation > .text > dl > dd {
     width: 70%;
     color: #9da0a7;
 }
@@ -239,11 +238,11 @@ footer.socialization > a {
     margin: 16px;
 }
 
-main>.download {
+.download {
     text-align: center;
 }
 
-.download>a {
+.download > a {
     font-size: 14px;
     line-height: 16px;
     padding: 21px 55px;
@@ -257,11 +256,11 @@ main>.download {
     transition: box-shadow 0.2s;
 }
 
-.download>a:hover {
+.download > a:hover {
     box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2);
 }
 
-main>.introduction {
+main > .introduction {
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
@@ -276,8 +275,8 @@ main>.introduction {
     margin: 60px auto 0;
 }
 
-.skills>h2,
-.portfolio>h2 {
+.skills > h2,
+.portfolio > h2 {
     text-align: center;
     color: #3d4451;
     font-size: 34px;
@@ -285,14 +284,14 @@ main>.introduction {
     font-weight: 600;
 }
 
-.skills>ol {
+.skills > ol {
     background: white;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, .5);
     padding: 42px 50px 10px;
     margin-top: 30px;
 }
 
-.skills>ol>li {
+.skills > ol > li {
     float: left;
     width: 48%;
     box-sizing: border-box;
