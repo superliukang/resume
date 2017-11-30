@@ -16,7 +16,7 @@
             background: #eee;
             justify-content: center;
             align-items: center;
-            z-index: 1;
+            z-index: 2;
         }
 
         .siteLoadding.active {
@@ -34,22 +34,22 @@
             </a>
             <nav class="headGuide clearfix">
                 <ul class="clearfix">
-                    <li><a href="#">关于</a>
+                    <li><a href="#siteAbout">关于</a>
                         
                     </li>
-                    <li><a href="#">技能</a></li>
-                    <li><a href="#">作品</a>
-                        <ul class="menuSideBar">
-                            <li>作品一</li>
-                            <li>作品二</li>
-                            <li>作品三</li>
+                    <li><a href="#siteSkills">技能</a></li>
+                    <li><a href="#siteProfolio">作品</a>
+                        <ul class="subMenu">
+                            <li><a>作品一</a></li>
+                            <li><a>作品二</a></li>
+                            <li><a>作品三</a></li>
                         </ul>
                     </li>
                     <li><a href="#">博客</a>
-                        <ul class="menuSideBar">
-                            <li>博客一</li>
-                            <li>博客二</li>
-                            <li>博客三</li>
+                        <ul class="subMenu">
+                            <li><a>博客一</a></li>
+                            <li><a>博客二</a></li>
+                            <li><a>博客三</a></li>
                         </ul>
                     </li>
                     <li><a href="#">日历</a></li>
@@ -62,7 +62,7 @@
             <div class="banner">
                 <div class="mask"></div>
             </div>
-            <div class="profile">
+            <section class="profile" id="siteAbout">
                 <div class="baseInformation clearfix">
                     <div class="picture">
                         <img src="img/headshot.jpg" alt="头像">
@@ -103,12 +103,12 @@
                         </svg>
                     </a>
                 </footer>  
-            </div>
+            </section>
             <p class="download"><a target="_blank" href="./resume.pdf" download>下载简历</a></p>
 
             <p class="introduction">我是占孜伟，是一个前端工程师，目前还在读书</p>
         </main>
-        <section class="skills">
+        <section class="skills" id="siteSkills">
             <h2>技能</h2>
             <ol class="clearfix">
                 <li>
@@ -161,7 +161,7 @@
                 </li>
             </ol>
         </section>
-        <section class="portfolio">
+        <section class="portfolio" id="siteProfolio">
             <h2>作品集</h2>
             <nav>
                 <ol class="clearfix">
@@ -177,6 +177,7 @@
                 portfolio1.onclick= function(){
                     portfolioBar.className = 'bar state-1'
                 }
+
                 portfolio2.onclick= function(){
                     portfolioBar.className = 'bar state-2'
                 }
@@ -210,6 +211,30 @@
                     topNavBar.classList.add("sticky")
                 } else {
                     topNavBar.classList.remove("sticky")
+                }
+            }
+
+            let lis = document.querySelectorAll(".topNavBar>nav>ul>li")
+            for(let i = 0; i < lis.length; i++) {
+                lis[i].onmouseenter = function(e) {
+                    e.currentTarget.classList.add("active")
+                }
+                lis[i].onmouseleave = function(e) {
+                    e.currentTarget.classList.remove("active")
+                }
+            }
+
+            let aTags = document.querySelectorAll('.topNavBar>nav>ul>li>a')
+            
+            for(let i=0; i<aTags.length; i++){
+        
+                aTags[i].onclick = function(e){
+                    e.preventDefault()
+                    let a = e.currentTarget
+                    let href = a.getAttribute("href")
+                    if(href === "#") return
+                    let element = document.querySelector(href)
+                    window.scrollTo(0, element.offsetTop - "70")
                 }
             }
         </script>
