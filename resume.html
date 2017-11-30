@@ -4,6 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <title>占孜伟的个人简历</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/loadding.css">
         <script src="http://at.alicdn.com/t/font_471520_h48yoykc9ad1jor.js"></script>
     </head>
     <style>
@@ -186,8 +187,9 @@
         </section>
         <script>
             var siteLoadding = document.getElementById("siteLoadding")
-
-            siteLoadding.classList.remove("active")
+            setTimeout(function() {
+                siteLoadding.classList.remove("active")
+            }, 3000)
         </script>
     </body>    
 </html>

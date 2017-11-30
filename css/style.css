@@ -44,7 +44,7 @@ header.topNavBar {
     padding: 20px 16px;
 }
 
-header.logo {
+header .logo {
     float: left;
     font-size: 24px;
     font-family: "Arial Black";
@@ -52,12 +52,12 @@ header.logo {
     padding-bottom: 4px;
 }
 
-header.rs {
+header .rs {
     margin-right: 4px;
     color: #e6686a;
 }
 
-header.card {
+header .card {
     color: #9a9da2;
 }
 
@@ -84,7 +84,7 @@ header.card {
 }
 
 .banner {
-    background-image: url('http://rscardwp.px-lab.com/wp-content/uploads/2016/02/rs-cover.jpg');
+    background-image: url('../img/banner.jpg');
     background-size: cover;
     height: 515px;
 }
