@@ -41,15 +41,23 @@ for(let i = 0; i < lis.length; i++) {
 
 // 点击列表，滚动至列表所指的位置
 let aTags = document.querySelectorAll('.topNavBar>nav>ul>li>a')
-
+var timer = null
+var top = 70
 for(let i=0; i<aTags.length; i++){
-
+    top += 5
     aTags[i].onclick = function(e){
-        e.preventDefault()
-        let a = e.currentTarget
-        let href = a.getAttribute("href")
-        if(href === "#") return
-        let element = document.querySelector(href)
-        window.scrollTo(0, element.offsetTop - "70")
+        timer = setInterval(function() {
+            e.preventDefault()
+            let a = e.currentTarget
+            let href = a.getAttribute("href")
+            if(href === "#") return
+            let element = document.querySelector(href)
+            if(element.offsetTop > top) {
+                clearInterval(timer)
+            }
+            window.scrollTo(0, 70 - "70")
+            console.log("jfds")
+        }, 3000)
+        
     }
 }
