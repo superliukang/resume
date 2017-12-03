@@ -38,26 +38,35 @@ for(let i = 0; i < lis.length; i++) {
     }
 }
 
-
 // 点击列表，滚动至列表所指的位置
 let aTags = document.querySelectorAll('.topNavBar>nav>ul>li>a')
-var timer = null
-var top = 70
+
 for(let i=0; i<aTags.length; i++){
-    top += 5
-    aTags[i].onclick = function(e){
-        timer = setInterval(function() {
-            e.preventDefault()
-            let a = e.currentTarget
-            let href = a.getAttribute("href")
-            if(href === "#") return
-            let element = document.querySelector(href)
-            if(element.offsetTop > top) {
-                clearInterval(timer)
-            }
-            window.scrollTo(0, 70 - "70")
-            console.log("jfds")
-        }, 3000)
+    aTags[i].onclick = function(event){
+        event.preventDefault()
         
+        
+        let a = event.currentTarget
+        let href = a.getAttribute("href")
+        let section = document.querySelector(href)
+        let top = section.offsetTop
+
+        let n = 25
+        let time = 1000 / 25
+        let currentTop = window.scrollY
+        let targetTop = top - 80
+        speed = (targetTop - currentTop) / n
+    
+        let count = 0
+        let timer = null
+        timer = setInterval(() => {
+            if(count === n) {
+                clearInterval(timer)
+                return
+            }
+            
+            count += 1
+            window.scrollTo(0, currentTop + speed * count)
+        }, time)
     }
 }
