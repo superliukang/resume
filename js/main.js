@@ -51,22 +51,25 @@ for(let i=0; i<aTags.length; i++){
         let section = document.querySelector(href)
         let top = section.offsetTop
 
-        let n = 25
-        let time = 1000 / 25
+
         let currentTop = window.scrollY
         let targetTop = top - 80
-        speed = (targetTop - currentTop) / n
-    
-        let count = 0
-        let timer = null
-        timer = setInterval(() => {
-            if(count === n) {
-                clearInterval(timer)
-                return
-            }
-            
-            count += 1
-            window.scrollTo(0, currentTop + speed * count)
-        }, time)
+        let distance = targetTop - currentTop
+        
+        function animate(time) {
+            requestAnimationFrame(animate);
+            TWEEN.update(time);
+        }
+        requestAnimationFrame(animate);
+        
+        var coords = {y: currentTop}; // Start at (0, 0)
+        var tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
+                .to({ y: targetTop }, 500) // Move to (300, 200) in 1 second.
+                .easing(TWEEN.Easing.Quadratic.In) // Use an easing function to make the animation smooth.
+                .onUpdate(function() { // Called after tween.js updates 'coords'.
+                    // Move 'box' to the position described by 'coords' with a CSS translation.
+                    window.scrollTo(0, coords.y)
+                })
+                .start(); // Start the tween immediately.
     }
 }
