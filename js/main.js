@@ -13,19 +13,25 @@ portfolio3.onclick = function () {
 
 //延迟loadding
 var siteLoadding = document.getElementById("siteLoadding")
-setTimeout(function() {
-    siteLoadding.classList.remove("active")
-}, 1000)
+
+siteLoadding.classList.remove("active")
+
 
 //topNavBar在滚动时候有背景
-
+//滚动时候topNavBar里的li跟随着滚动区域变化
+slideBottomTop()
 window.onscroll = function() {
     if(window.scrollY > 0) {
         topNavBar.classList.add("sticky")
     } else {
         topNavBar.classList.remove("sticky")
     }
+    slideBottomTop()
+}
 
+
+//找到离滚动条最近的元素
+function slideBottomTop() {
     let dataYs = document.querySelectorAll("[data-y]")
     let minIndex = 0
     for(let i = 1; i < dataYs.length; i++) {
@@ -35,20 +41,16 @@ window.onscroll = function() {
             minIndex = i
         }
     }
-    for(let i = 0; i < dataYs.length; i++) {
-        dataYs[i].classList.remove("active")
-    }
     let id = dataYs[minIndex].id
     let href = "#" + id
-    dataYs[minIndex].classList.add("active")
+    dataYs[minIndex].classList.remove("upup")
     let a = document.querySelector("a[href=\"" + href + "\"]")
     let topNavLis = a.parentElement.parentElement.children
     for(let i = 0; i < topNavLis.length; i++) {
-        topNavLis[i].classList.remove("active")
+        topNavLis[i].classList.remove("highLight")
     }
-    a.parentElement.classList.add("active")
+    a.parentElement.classList.add("highLight")
 }
-
 
 //topNavBar切换li标签
 let lis = document.querySelectorAll(".topNavBar>nav>ul>li")

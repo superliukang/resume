@@ -100,7 +100,8 @@ header.topNavBar.sticky {
     transition: all 0.3s ease-out;
 }
 
-.topNavBar>nav>ul>li.active>a::after {
+.topNavBar>nav>ul>li.active>a::after,
+.topNavBar>nav>ul>li.highLight>a::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -322,12 +323,15 @@ section.skills .progressBar {
     background: #FAE1E1;
     border-radius: 2px;
     margin: 4px 0 40px;
+    overflow: hidden;
 }
 section.skills .progressBar > .progress {
     height: 100%;
     background: #E6686A;
     width: 70%;
     border-radius: 2px;
+    transform: translateX(0);
+    transition: all .5s;
 }
 
 section.portfolio {
