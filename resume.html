@@ -1,191 +1,194 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <title>占孜伟的个人简历</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/loadding.css">
-        <script src="http://at.alicdn.com/t/font_471520_h48yoykc9ad1jor.js"></script>
-    </head>
-    <style>
-        .siteLoadding {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            display: none;
-            background: #eee;
-            justify-content: center;
-            align-items: center;
-            z-index: 2;
-        }
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>占孜伟的个人简历</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/loadding.css">
+		<script src="https://at.alicdn.com/t/font_471520_h48yoykc9ad1jor.js"></script>
+	</head>
+	<style>
+		.siteLoadding {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			display: none;
+			background: #eee;
+			justify-content: center;
+			align-items: center;
+			z-index: 2;
+		}
 
-        .siteLoadding.active {
-            display: flex;
-        }
+		.siteLoadding.active {
+			display: flex;
+		}
+		
+		[data-y].active {
+			outline: 10px solid red;
+		}
+	</style>
+	<body>
+		<div id="siteLoadding" class="siteLoadding active">
+			<div class="loadding"></div>
+		</div>
+		<header id="topNavBar" class="topNavBar clearfix">
+			<a class="logo" href="#" name="logo">
+				<span class="rs">RS</span><span class="card">card</span>
+			</a>
+			<nav class="headGuide clearfix">
+				<ul class="clearfix">
+					<li><a href="#siteAbout">关于</a>
+						
+					</li>
+					<li><a href="#siteSkills">技能</a></li>
+					<li><a href="#siteProfolio">作品</a>
+						<ul class="subMenu">
+							<li><a>作品一</a></li>
+							<li><a>作品二</a></li>
+							<li><a>作品三</a></li>
+						</ul>
+					</li>
+					<li><a href="#siteBlog">博客</a>
+						<ul class="subMenu">
+							<li><a>博客一</a></li>
+							<li><a>博客二</a></li>
+							<li><a>博客三</a></li>
+						</ul>
+					</li>
+					<li><a href="#">日历</a></li>
+					<li><a href="#">联系方式</a></li>
+					<li><a href="#">其他</a></li>   
+				</ul>
+			</nav>  
+		</header>
+		<main>
+			<div class="banner">
+				<div class="mask"></div>
+			</div>
+			<section data-y class="profile" id="siteAbout">
+				<div class="baseInformation clearfix">
+					<div class="picture">
+						<img src="img/headshot.jpg" alt="头像">
+					</div>
+					<div class="text">
+						<span class="welcome">Hello
+							<span class="triangle"></span>
+						</span>
+						<h1>占孜伟</h1>
+						<h2>前端开发工程师</h2>
+						<hr>
+						<dl>
+							<dt>年龄</dt>
+							<dd>21</dd>
+							<dt>邮箱</dt>
+							<dd>1715024080@qq.com</dd>
+							<dt>手机</dt>
+							<dd>15202405360</dd>
+							<dt>毕业年份</dt>
+							<dd>2018年</dd>
+						</dl>
+					</div>
+				</div>
+				<footer class="socialization">
+					<a href="#">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-github"></use>
+						</svg>
+					</a>
+					<a href="#">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-qq"></use>
+						</svg>
+					</a>
+					<a href="#">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-twitter"></use>
+						</svg>
+					</a>
+				</footer>  
+			</section>
+			<p class="download"><a target="_blank" href="./resume.pdf" download>下载简历</a></p>
 
-    </style>
-    <body>
-        <div id="siteLoadding" class="siteLoadding active">
-            <div class="loadding"></div>
-        </div>
-        <header id="topNavBar" class="topNavBar clearfix">
-            <a class="logo" href="#" name="logo">
-                <span class="rs">RS</span><span class="card">card</span>
-            </a>
-            <nav class="headGuide clearfix">
-                <ul class="clearfix">
-                    <li><a href="#siteAbout">关于</a>
-                        
-                    </li>
-                    <li><a href="#siteSkills">技能</a></li>
-                    <li><a href="#siteProfolio">作品</a>
-                        <ul class="subMenu">
-                            <li><a>作品一</a></li>
-                            <li><a>作品二</a></li>
-                            <li><a>作品三</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">博客</a>
-                        <ul class="subMenu">
-                            <li><a>博客一</a></li>
-                            <li><a>博客二</a></li>
-                            <li><a>博客三</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">日历</a></li>
-                    <li><a href="#">联系方式</a></li>
-                    <li><a href="#">其他</a></li>   
-                </ul>
-            </nav>  
-        </header>
-        <main>
-            <div class="banner">
-                <div class="mask"></div>
-            </div>
-            <section class="profile" id="siteAbout">
-                <div class="baseInformation clearfix">
-                    <div class="picture">
-                        <img src="img/headshot.jpg" alt="头像">
-                    </div>
-                    <div class="text">
-                        <span class="welcome">Hello
-                            <span class="triangle"></span>
-                        </span>
-                        <h1>占孜伟</h1>
-                        <h2>前端开发工程师</h2>
-                        <hr>
-                        <dl>
-                            <dt>年龄</dt>
-                            <dd>21</dd>
-                            <dt>邮箱</dt>
-                            <dd>1715024080@qq.com</dd>
-                            <dt>手机</dt>
-                            <dd>15202405360</dd>
-                            <dt>毕业年份</dt>
-                            <dd>2018年</dd>
-                        </dl>
-                    </div>
-                </div>
-                <footer class="socialization">
-                    <a href="#">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-github"></use>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-qq"></use>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-twitter"></use>
-                        </svg>
-                    </a>
-                </footer>  
-            </section>
-            <p class="download"><a target="_blank" href="./resume.pdf" download>下载简历</a></p>
-
-            <p class="introduction">我是占孜伟，是一个前端工程师，目前还在读书</p>
-        </main>
-        <section class="skills" id="siteSkills">
-            <h2>技能</h2>
-            <ol class="clearfix">
-                <li>
-                    <h3>
-                        HTML 5 &amp; CSS 3
-                    </h3>
-                    <div class="progressBar">
-                        <div class="progress" style="width: 10%;"></div>
-                    </div>
-                </li>
-                <li>
-                    <h3>
-                        JavaScript
-                    </h3>
-                    <div class="progressBar">
-                        <div class="progress" style="width: 20%"></div>
-                    </div>
-                </li>
-                <li>
-                    <h3>
-                        jQuery
-                    </h3>
-                    <div class="progressBar">
-                        <div class="progress" style="width: 30%"></div>
-                    </div>
-                </li>
-                <li>
-                    <h3>
-                        Vue.js
-                    </h3>
-                    <div class="progressBar">
-                        <div class="progress" style="width: 40%"></div>
-                    </div>
-                </li>
-                <li>
-                    <h3>
-                        React.js
-                    </h3>
-                    <div class="progressBar">
-                        <div class="progress" style="width: 50%"></div>
-                    </div>
-                </li>
-                <li>
-                    <h3>
-                        Node.js
-                    </h3>
-                    <div class="progressBar">
-                        <div class="progress" style="width: 60%"></div>
-                    </div>
-                </li>
-            </ol>
-        </section>
-        <section class="portfolio" id="siteProfolio">
-            <h2>作品集</h2>
-            <nav>
-                <ol class="clearfix">
-                    <li id="portfolio1">所有</li>
-                    <li id="portfolio2">框架</li>
-                    <li id="portfolio3">原生JS&amp;CSS</li>
-                </ol>
-                <div id="portfolioBar" class="bar state-1">
-                    <div class="bar-inner"></div>
-                </div>
-            </nav>
-            <div class="works" style="height: 597px;">
-                <div class="big" style="top: 0; left: 0;">
-                    <img src="./img/1.jpg" alt="作品1">
-                </div>
-                <div class="small" style="top: 0; left: 645px;">
-                    <img src="./img/2.jpg" alt="作品2">
-                </div>
-                <div class="small" style="top: 312px; left: 645px;">
-                    <img src="./img/3.jpg" alt="作品3">
-                </div>
-            </div>
-        </section>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
-        <script src="js/main.js"></script>
-    </body>    
+			<p class="introduction">我是占孜伟，是一个前端工程师，目前还在读书</p>
+		</main>
+		<section data-y class="skills" id="siteSkills">
+			<h2>技能</h2>
+			<ol class="clearfix">
+				<li>
+					<h3>
+						HTML 5 &amp; CSS 3
+					</h3>
+					<div class="progressBar">
+						<div class="progress" style="width: 10%;"></div>
+					</div>
+				</li>
+				<li>
+					<h3>
+						JavaScript
+					</h3>
+					<div class="progressBar">
+						<div class="progress" style="width: 20%"></div>
+					</div>
+				</li>
+				<li>
+					<h3>
+						jQuery
+					</h3>
+					<div class="progressBar">
+						<div class="progress" style="width: 30%"></div>
+					</div>
+				</li>
+				<li>
+					<h3>
+						Vue.js
+					</h3>
+					<div class="progressBar">
+						<div class="progress" style="width: 40%"></div>
+					</div>
+				</li>
+				<li>
+					<h3>
+						React.js
+					</h3>
+					<div class="progressBar">
+						<div class="progress" style="width: 50%"></div>
+					</div>
+				</li>
+				<li>
+					<h3>
+						Node.js
+					</h3>
+					<div class="progressBar">
+						<div class="progress" style="width: 60%"></div>
+					</div>
+				</li>
+			</ol>
+		</section>
+		<section data-y class="portfolio" id="siteProfolio">
+			<h2>作品集</h2>
+			<nav>
+				<ol class="clearfix">
+					<li id="portfolio1">所有</li>
+					<li id="portfolio2">框架</li>
+					<li id="portfolio3">原生JS&amp;CSS</li>
+				</ol>
+				<div id="portfolioBar" class="bar state-1">
+					<div class="bar-inner"></div>
+				</div>
+			</nav>
+			<div class="works" style="height: 597px;">
+				<div class="big" style="top: 0; left: 0;">
+					<img src="./img/1.jpg" alt="作品1">
+				</div>
+				<div class="small" style="top: 0; left: 645px;">
+					<img src="./img/2.jpg" alt="作品2">
+				</div>
+				<div class="small" style="top: 312px; left: 645px;">
+					<img src="./img/3.jpg" alt="作品3">
+				</div>
+			</div>
+		</section>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>    
 </html>

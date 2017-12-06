@@ -18,12 +18,35 @@ setTimeout(function() {
 }, 1000)
 
 //topNavBar在滚动时候有背景
+
 window.onscroll = function() {
     if(window.scrollY > 0) {
         topNavBar.classList.add("sticky")
     } else {
         topNavBar.classList.remove("sticky")
     }
+
+    let dataYs = document.querySelectorAll("[data-y]")
+    let minIndex = 0
+    for(let i = 1; i < dataYs.length; i++) {
+        let minDistance = Math.abs(dataYs[minIndex].offsetTop - window.scrollY)
+        let distance = Math.abs(dataYs[i].offsetTop - window.scrollY)
+        if(distance < minDistance) {
+            minIndex = i
+        }
+    }
+    for(let i = 0; i < dataYs.length; i++) {
+        dataYs[i].classList.remove("active")
+    }
+    let id = dataYs[minIndex].id
+    let href = "#" + id
+    dataYs[minIndex].classList.add("active")
+    let a = document.querySelector("a[href=\"" + href + "\"]")
+    let topNavLis = a.parentElement.parentElement.children
+    for(let i = 0; i < topNavLis.length; i++) {
+        topNavLis[i].classList.remove("active")
+    }
+    a.parentElement.classList.add("active")
 }
 
 
